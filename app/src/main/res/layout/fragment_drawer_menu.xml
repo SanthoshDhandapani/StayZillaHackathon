@@ -1,3 +1,4 @@
+<!--
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_drawerMenu_listView"
@@ -7,3 +8,69 @@
     android:background="@color/home_bg"
     android:dividerHeight="0dp"
     tools:context=".FragmentDrawerMenu" />
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left_drawer_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:weightSum="8"
+    android:clickable="true"
+    android:background="@color/home_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <RelativeLayout
+            android:id="@+id/profile_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/theme_dialer_high" >
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile_icon"
+                android:padding="@dimen/profile_view_padding"/>
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/white"
+                android:text="@string/profile_name"
+                android:textSize="@dimen/profile_user_name_text_size"
+                android:padding="@dimen/profile_view_padding"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="5">
+        <RelativeLayout
+            android:id="@+id/profile_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/fragment_drawerMenu_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="#808080"
+                android:dividerHeight="2dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

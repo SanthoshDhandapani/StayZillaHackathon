@@ -52,6 +52,7 @@ public class
      */
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
+    private View drawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
     private int mCurrentSelectedPosition = 0;
@@ -71,12 +72,13 @@ public class
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_drawer_menu, container, false);
+        drawerLayout =  inflater.inflate(R.layout.fragment_drawer_menu, container, false);
+        mDrawerListView = (ListView)drawerLayout.findViewById(R.id.fragment_drawerMenu_listView);
 
         loadListeners();
         loadInfoView();
 
-        return mDrawerListView;
+        return drawerLayout;
     }
 
     @Override

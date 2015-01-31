@@ -6,4 +6,6 @@
     <!-- Drawer Menu Default -->
     <string name="drawerMenuComp_textTitle">Menu 1</string>
 
+    <string name="profile_name">StayZilla User</string>
+
 </resources>
