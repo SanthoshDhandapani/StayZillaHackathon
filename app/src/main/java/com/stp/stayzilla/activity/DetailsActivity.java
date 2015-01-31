@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
@@ -50,6 +51,12 @@ public class DetailsActivity extends ActionBarActivity implements ObservableScro
         mScrollView.setScrollViewCallbacks(this);
 
         mParallaxImageHeight = getResources().getDimensionPixelSize(R.dimen.drawer_menu_width);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home) finish();
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

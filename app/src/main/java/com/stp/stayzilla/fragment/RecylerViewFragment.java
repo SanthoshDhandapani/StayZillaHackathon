@@ -17,6 +17,7 @@ import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
 import com.stp.stayzilla.model.CardViewBean;
 import com.stp.stayzilla.utility.PrintFontIconDrawable;
+import com.yalantis.pulltorefresh.library.PullToRefreshView;
 
 import org.json.JSONArray;
 
@@ -28,12 +29,20 @@ import butterknife.OnClick;
  * Created by halyson on 18/12/14.
  */
 public class RecylerViewFragment extends BaseFragment {
+
     private static final String MOCK_URL = "http://lorempixel.com/800/400/nightlife/";
     private View mViewRecyclerCardsView;
     private RecyclerView mRecyclerView;
     private FloatingActionButton mFloatingActionButton;
     private JSONArray hotelEntries;
     @InjectView(R.id.mapview) com.melnykov.fab.FloatingActionButton mapFab;
+    @InjectView(R.id.filter_fab) com.melnykov.fab.FloatingActionButton filterFab;
+    private final int REFRESH_DELAY = 2000;
+    private int MAX_RADIUS = 100;
+
+    @InjectView(R.id.hotels_refresh_view)
+    PullToRefreshView mPullToRefreshView;
+
     public static RecylerViewFragment newInstance(JSONArray hotelEntries) {
         RecylerViewFragment recylerViewFragment = new RecylerViewFragment();
         recylerViewFragment.hotelEntries = hotelEntries;
@@ -55,6 +64,22 @@ public class RecylerViewFragment extends BaseFragment {
         mapFab.setImageDrawable(PrintFontIconDrawable.getInstance(getActivity())
                 .getDrawableFontIcon(R.string.fa_location_arrow, android.R.color.white,
                         R.dimen.fab_icon_size));
+        filterFab.setImageDrawable(PrintFontIconDrawable.getInstance(getActivity())
+                .getDrawableFontIcon(R.string.fa_filter, android.R.color.white,
+                        R.dimen.fab_icon_size));
+
+        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                mPullToRefreshView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mPullToRefreshView.setRefreshing(false);
+                    }
+                }, REFRESH_DELAY);
+            }
+        });
 
         return mViewRecyclerCardsView;
     }

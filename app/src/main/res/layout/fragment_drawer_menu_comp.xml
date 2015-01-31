@@ -7,12 +7,20 @@
     android:paddingTop="@dimen/padding_eight"
     tools:context=".DrawerMenuComp">
 
+    <ImageView
+        android:id="@+id/prof_settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/profile_view_padding"
+        android:layout_marginRight="@dimen/profile_view_padding"/>
+
     <TextView
         android:id="@+id/fragment_drawerMenu_comp_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/gray_row_color"
-        android:textStyle="bold"
+        android:textColor="@color/action_icons_color"
+        android:layout_toRightOf="@id/prof_settings_icon"
+        android:layout_centerVertical="true"
         tools:text="@string/drawerMenuComp_textTitle" />
 
 </RelativeLayout>
