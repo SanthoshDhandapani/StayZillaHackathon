@@ -13,9 +13,6 @@ import com.stp.stayzilla.events.LoadTitleTabsDisk;
 import com.stp.stayzilla.interfaces.home.HomeRepository;
 import com.stp.stayzilla.utility.BusProvider;
 
-/**
- * Created by Halyson on 20/01/15.
- */
 public class HomeRepositoryDiskImpl implements HomeRepository {
     private static final String TAG = HomeRepositoryDiskImpl.class.getSimpleName();
 

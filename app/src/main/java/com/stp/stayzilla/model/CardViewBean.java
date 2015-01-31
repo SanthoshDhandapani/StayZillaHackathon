@@ -1,8 +1,5 @@
 package com.stp.stayzilla.model;
 
-/**
- * Created by halyson on 19/12/14.
- */
 public class CardViewBean {
     String urlImage;
 
