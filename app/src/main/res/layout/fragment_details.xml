@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.stp.stayzilla.LocationDetailFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/locationimage"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location Name"
+        android:id="@+id/locationName"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@+id/locationimage"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bookmark"
+        android:id="@+id/checkBox"
+        android:layout_alignTop="@+id/locationName"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startDate"
+        android:layout_below="@+id/locationimage"
+        android:layout_alignLeft="@+id/locationName"
+        android:layout_marginLeft="5dp"
+        android:text="20/03/2015"
+        android:layout_alignStart="@+id/locationName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endDate"
+        android:layout_below="@+id/locationimage"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="27/03/2015"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/separator"
+        android:layout_below="@id/startDate"
+        android:layout_height="0.2dp" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotellist"
+        android:layout_below="@id/startDate"
+        >
+
+        </ListView>
+</RelativeLayout>

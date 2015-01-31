@@ -29,7 +29,11 @@
 
     <color name="color_set_2_primary">#42bd41</color>
     <color name="color_set_2_accent">#673AB7</color>
-
+    <color name="smart_orange">#FF5534</color>
+    <color name="smart_orange_light">#FCBDB1</color>
+    <color name="smart_white_background">#FAFAFA</color>
+    <color name="smart_profile_background">#1299F6</color>
+    <color name="thick_grey_font">#4D4D4D</color>
     <color name="color_set_3_primary">#ffb74d</color>
     <color name="color_set_3_accent">#E91E63</color>
 

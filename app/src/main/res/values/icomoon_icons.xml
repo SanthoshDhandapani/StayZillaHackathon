@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ico_search">&#xe645;</string>
+    <string name="ico_cart">&#xe646;</string>
+    <string name="ico_direction">&#xe654;</string>
+    <string name="ico_popularity">&#xe64e;</string>
+    <string name="ico_cost">&#xe642;</string>
+    <string name="ico_certified">&#xe60b;</string>
+    <string name="ico_checkbox">&#xe64f;</string>
+    <string name="ico_close">&#xe627;</string>
+    <string name="ico_back_arrow">&#xe620;</string>
+    <string name="ico_deliverable">&#xe651;</string>
+    <string name="ico_rating_start_selected">&#xe64e;</string>
+    <string name="ico_rating_start_unselected">&#xe64d;</string>
+    <string name="ico_up_arrow">&#xe625;</string>
+    <string name="ico_down_arrow">&#xe622;</string>
+    <string name="ico_checkbox_unselected">&#xe615;</string>
+    <string name="ico_checkbox_selected">&#xe616;</string>
+</resources>

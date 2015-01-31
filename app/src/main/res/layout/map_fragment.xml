@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/smart_white_background"
+
+    android:orientation="vertical">
+
+    <AutoCompleteTextView
+        android:id="@+id/auto_CompleteTextView"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/searched_Place_Layout"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:background="@color/smart_white_background"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/searched_Place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="18dp"
+            android:text="Chennai"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="14dp"
+            android:text="Details"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/smart_orange_light" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_fragment_layout"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/auto_CompleteTextView"
+        android:layout_above="@+id/searched_Place_Layout"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/marker_info"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/smart_white_background">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_alignRight="@+id/restaurant_map_distance_text"
+                android:layout_alignEnd="@+id/restaurant_map_distance_text">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/relativeLayout"
+                    android:layout_above="@+id/restaurant_details"
+                    android:layout_alignRight="@+id/restaurant_map_distance_text"
+                    android:layout_alignEnd="@+id/restaurant_map_distance_text">
+
+                    <TextView
+                        android:id="@+id/restaurant_map_name_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/smart_orange" />
+
+                    <TextView
+                        android:id="@+id/restaurant_map_addr_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/restaurant_map_name_info"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/thick_grey_font" />
+
+                </RelativeLayout>
+            </ScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/restaurant_map_distance_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/smart_profile_background"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+
+                <com.github.johnkil.print.PrintView
+                    android:id="@+id/card_location_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    sothree:iconText="@string/ico_direction"
+                    sothree:iconColor="@color/smart_white_background"
+                    sothree:iconSize="25dp" />
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/smart_white_background"></RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
