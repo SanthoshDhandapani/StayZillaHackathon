@@ -60,7 +60,7 @@ public class RecylerViewFragment extends BaseFragment {
 
     private void loadViewComponents() {
         mRecyclerView = (RecyclerView) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_content_main);
-        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_float_action_button);
+        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.mapview);
     }
 
     private void loadInfoView() {

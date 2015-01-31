@@ -67,8 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:choiceMode="singleChoice"
-                android:divider="#808080"
-                android:dividerHeight="2dp"/>
+                android:divider="@color/profile_divider_color"
+                android:dividerHeight="1dp"/>
         </RelativeLayout>
 
     </LinearLayout>
