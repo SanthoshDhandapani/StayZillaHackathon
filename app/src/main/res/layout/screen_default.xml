@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/screen_default_navigation_drawer"
         android:name="com.stp.stayzilla.fragment.NavigationDrawerFragment"
-        android:layout_width="@dimen/drawer_menu_width"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         tools:context=".NavigationDrawer"

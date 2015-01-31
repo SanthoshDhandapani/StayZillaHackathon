@@ -1,5 +1,6 @@
 package com.stp.stayzilla.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.stp.stayzilla.MainActivity;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
@@ -60,7 +62,7 @@ public class RecylerViewFragment extends BaseFragment {
 
     private void loadViewComponents() {
         mRecyclerView = (RecyclerView) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_content_main);
-        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_float_action_button);
+        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.mapview);
     }
 
     private void loadInfoView() {
@@ -70,6 +72,12 @@ public class RecylerViewFragment extends BaseFragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(getActivity(),hotelEntries));
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MainActivity.class));
+            }
+        });
     }
 
     private List<CardViewBean> createMockList() {

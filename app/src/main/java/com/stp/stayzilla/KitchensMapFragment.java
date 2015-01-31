@@ -81,7 +81,7 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
     }
 
     private void initMap(ArrayList<LatLng> latLng1) {
-        ArrayList<LatLng> latLng = getStaticTourPlaces();
+        ArrayList<LatLng> latLng = getStaticNearByPlaces();
         bundle.putParcelableArrayList("latlng", latLng);
         kitchenMiniMapFragment.setArguments(bundle);
         getActivity().getSupportFragmentManager().beginTransaction().add(R.id.map, kitchenMiniMapFragment).commit();
@@ -94,6 +94,7 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
         AutoCompleteTextView autoCompView = (AutoCompleteTextView) rootView.findViewById(R.id.auto_CompleteTextView);
         autoCompView.setAdapter(new PlacesAutoCompleteAdapter(getActivity(), android.R.layout.simple_list_item_1));
         autoCompView.setOnItemClickListener(this);
+        autoCompView.setVisibility(View.GONE);
     }
 
 //    public void createSlipeUpPanel(){
@@ -375,6 +376,17 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
         list.add(new LatLng(Double.parseDouble("27.160586"), Double.parseDouble("78.013916")));
         list.add(new LatLng(Double.parseDouble("34.128858"), Double.parseDouble("76.343994")));
         list.add(new LatLng(Double.parseDouble("11.410538"), Double.parseDouble("76.716156")));
+        return list;
+    }
+
+    public ArrayList<LatLng> getStaticNearByPlaces(){
+        ArrayList<LatLng> list = new ArrayList<LatLng>();
+        list.add(new LatLng(Double.parseDouble("13.082680"), Double.parseDouble("80.270718")));
+        list.add(new LatLng(Double.parseDouble("13.083841"), Double.parseDouble("80.260792")));
+        list.add(new LatLng(Double.parseDouble("13.081641"), Double.parseDouble("80.251792")));
+        list.add(new LatLng(Double.parseDouble("13.082441"), Double.parseDouble("80.254792")));
+        list.add(new LatLng(Double.parseDouble("13.084841"), Double.parseDouble("80.261792")));
+        list.add(new LatLng(Double.parseDouble("13.083841"), Double.parseDouble("80.251792")));
         return list;
     }
 
