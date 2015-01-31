@@ -18,7 +18,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.stp.stayzilla" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3304121d-ec2c-42bb-b307-06a4c9d4e535" name="Default" comment="" />
+    <list default="true" id="3304121d-ec2c-42bb-b307-06a4c9d4e535" name="Default" comment="">
+      <change type="DELETED" beforePath="F:\Stayzilla_Dev\Dev\StayZillaHackathon\README.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Material-Design-Example.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,6 +51,7 @@
   </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="DONT" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -1162,7 +1166,7 @@
     <option name="width" value="1552" />
     <option name="height" value="842" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -1593,6 +1597,11 @@
       <created>1418736172233</created>
       <updated>1418736172233</updated>
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1422731278509</created>
+      <updated>1422731278510</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1676,7 +1685,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
