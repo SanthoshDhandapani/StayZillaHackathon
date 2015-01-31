@@ -7,25 +7,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.melnykov.fab.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
 import com.stp.stayzilla.model.CardViewBean;
+import com.stp.stayzilla.utility.PrintFontIconDrawable;
 
 import org.json.JSONArray;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 
 /**
  * Created by halyson on 18/12/14.
@@ -36,7 +33,7 @@ public class RecylerViewFragment extends BaseFragment {
     private RecyclerView mRecyclerView;
     private FloatingActionButton mFloatingActionButton;
     private JSONArray hotelEntries;
-
+    @InjectView(R.id.mapview) com.melnykov.fab.FloatingActionButton mapFab;
     public static RecylerViewFragment newInstance(JSONArray hotelEntries) {
         RecylerViewFragment recylerViewFragment = new RecylerViewFragment();
         recylerViewFragment.hotelEntries = hotelEntries;
@@ -51,11 +48,19 @@ public class RecylerViewFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mViewRecyclerCardsView = inflater.inflate(R.layout.fragment_recycler_view, container, false);
+        ButterKnife.inject(this, mViewRecyclerCardsView);
 
         loadViewComponents();
         loadInfoView();
+        mapFab.setImageDrawable(PrintFontIconDrawable.getInstance(getActivity())
+                .getDrawableFontIcon(R.string.fa_location_arrow, android.R.color.white,
+                        R.dimen.fab_icon_size));
 
         return mViewRecyclerCardsView;
+    }
+
+    @OnClick(R.id.mapview)
+    public void onMapFabClick(View view) {
     }
 
     private void loadViewComponents() {

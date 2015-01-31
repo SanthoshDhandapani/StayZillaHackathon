@@ -3,6 +3,9 @@
     <dimen name="profile_view_padding">15dp</dimen>
     <dimen name="profile_user_name_text_size">18sp</dimen>
 
+    <!-- Fab icons dimensions. -->
+    <dimen name="fab_icon_size">28dp</dimen>
+
     <!-- Text Sizes -->
     <dimen name="text_size_two">2dp</dimen>
     <dimen name="text_size_four">4dp</dimen>
