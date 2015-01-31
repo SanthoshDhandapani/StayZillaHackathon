@@ -50,7 +50,6 @@ public class HomeFragment extends BaseFragment implements HomeView {
             hotels  = reader.getJSONArray("hotels");
             loadViewComponents();
             initPresenter();
-            System.out.println("After Loading");
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -65,7 +64,6 @@ public class HomeFragment extends BaseFragment implements HomeView {
 
             @Override
             public void onResponse(String response) {
-                System.out.println("Response: "+response);
                 processResponse(response);
             }
         }, new Response.ErrorListener() {
