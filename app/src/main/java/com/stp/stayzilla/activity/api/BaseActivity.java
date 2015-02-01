@@ -85,25 +85,7 @@ public abstract class BaseActivity extends ActionBarActivity implements
     }
 
     @Override
-    public void onNavigationDrawerItemSelected(int position) {
-        System.out.println("on click "+position);
-
-       /* switch (position) {
-            case DrawerMenu.HOME:
-                fragmentTransaction(new HomeFragment());
-                break;
-            case DrawerMenu.FRAGMENT_WISH_LIST:
-                fragmentTransaction(new KitchensMapFragment());
-                break;
-            case DrawerMenu.FRAGMENT_FRIENDS:
-                fragmentTransaction(new HomeFragment());
-            case DrawerMenu.FRAGMENT_ACCOUNT:
-                fragmentTransaction(new HomeFragment());
-            case DrawerMenu.FRAGMENT_BOOKINGS:
-                fragmentTransaction(new HomeFragment());
-                break;
-        }*/
-    }
+    public void onNavigationDrawerItemSelected(int position) {   }
 
     public void fragmentTransaction(Fragment fragment) {
         if (fragment != null) {
