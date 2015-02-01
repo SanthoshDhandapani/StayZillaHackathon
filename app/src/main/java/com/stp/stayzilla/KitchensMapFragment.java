@@ -366,6 +366,7 @@ public class KitchensMapFragment extends Fragment implements AdapterView.OnItemC
         if (v == searchedPlaceLayout) {
             navigateToDetailsScreen();
         } else if (v == searchButton) {
+
             autoCompView.setVisibility(View.VISIBLE);
             autoCompView.requestFocus();
             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -373,9 +374,25 @@ public class KitchensMapFragment extends Fragment implements AdapterView.OnItemC
         }
     }
 
+    private void fragmentTransaction(Fragment fragment) {
+        Bundle bundle = new Bundle();
+        bundle.putString("from", "");
+        if (fragment != null) {
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.screen_default_container, fragment)
+                    .commit();
+        }
+    }
+
     private void navigateToDetailsScreen() {
         LocationDetailFragment.selectedPlace = selectedPlace;
-        startActivity(new Intent(getActivity(), LocationDetailsActivity.class));
+        Bundle bundle = new Bundle();
+        bundle.putString("name", selectedPlace.getName());
+        bundle.putDouble("lat", selectedPlace.getLatitude());
+        bundle.putDouble("lan",selectedPlace.getLongitude() );
+        Intent i = new Intent(getActivity(), LocationDetailsActivity.class);
+        i.putExtra("place", bundle);
+        startActivity(i);
 
     }
 

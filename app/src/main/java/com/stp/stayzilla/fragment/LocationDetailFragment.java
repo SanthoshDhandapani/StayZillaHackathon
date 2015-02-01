@@ -58,6 +58,9 @@ public class LocationDetailFragment extends Fragment {
     ListView mHotellist;
 
     public static Place selectedPlace;
+    String name;
+    double lati;
+    double lan;
 
     public LocationDetailFragment() {
         // Required empty public constructor
@@ -65,7 +68,8 @@ public class LocationDetailFragment extends Fragment {
 
     public static LocationDetailFragment newInstance(Place place){
         LocationDetailFragment fragment = new LocationDetailFragment();
-        fragment.selectedPlace=place;
+        //fragment.selectedPlace=place;
+
         return fragment;
     }
 
@@ -77,6 +81,9 @@ public class LocationDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_details, container, false);
+        name = getArguments().getString("name");
+        lati = getArguments().getDouble("lat");
+        lan = getArguments().getDouble("lan");
         ButterKnife.inject(this, view);
         initView();
         return view;
@@ -84,7 +91,7 @@ public class LocationDetailFragment extends Fragment {
 
     private void initView() {
         Picasso.with(getActivity()).load("http://www.ultimatebali.com/sites/default/files/styles/listing_slideshow/public/TirtaNilaPreview_35_NightLightsOnTheBay_1.jpg").fit().into(mLocationimage);
-        locationName.setText(selectedPlace.getName());
+        locationName.setText(name);
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         String url ="http://180.92.168.7/hotels";
 
@@ -107,8 +114,8 @@ public class LocationDetailFragment extends Fragment {
                 params.put("checkin",mStartDate.getText().toString());
                 params.put("checkout",mEndDate.getText().toString());
                 params.put("property_type","Hotels");
-                params.put("lat",String.valueOf(selectedPlace.getLatitude()));
-                params.put("lng",String.valueOf(selectedPlace.getLongitude()));
+                params.put("lat",String.valueOf(lati));
+                params.put("lng",String.valueOf(lan));
 
 //                params.put("user",userAccount.getUsername());
 //                params.put("pass",userAccount.getPassword());

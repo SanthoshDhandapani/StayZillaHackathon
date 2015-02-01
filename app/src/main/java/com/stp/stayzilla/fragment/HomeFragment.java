@@ -23,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.stp.stayzilla.R;
+import com.stp.stayzilla.activity.HomeActivity;
 import com.stp.stayzilla.activity.api.BaseActivity;
 import com.stp.stayzilla.adapter.HomePagerAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
@@ -43,7 +44,7 @@ public class HomeFragment extends BaseFragment implements HomeView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mViewHome = inflater.inflate(R.layout.fragment_default, container, false);
-        this.hotels = ((BaseActivity) getActivity()).hotelEntries;
+        this.hotels = ((HomeActivity) getActivity()).hotels;
         loadViewComponents();
         initPresenter();
         return mViewHome;
