@@ -10,6 +10,7 @@ import com.stp.stayzilla.KitchensMapFragment;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.activity.api.BaseActivity;
 import com.stp.stayzilla.constants.AppConstants;
+import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.constants.FragmentNames;
 import com.stp.stayzilla.fragment.HomeFragment;
 
@@ -53,9 +54,17 @@ public class HomeActivity extends BaseActivity {
     public void onNavigationDrawerItemSelected(int position) {
         super.onNavigationDrawerItemSelected(position);
 
-        Bundle bundle = new Bundle();
-        bundle.putInt(AppConstants.RESPONSE_KEY,position);
-        Intent intent = new Intent(HomeActivity.this, HelperActivity.class);
-        startActivity(intent);
+        if(position !=   DrawerMenu.FRAGMENT_FRIENDS
+
+        && position != DrawerMenu.FRAGMENT_ACCOUNT
+
+        && position !=  DrawerMenu.FRAGMENT_BOOKINGS
+        ) {
+
+            Bundle bundle = new Bundle();
+            bundle.putInt(AppConstants.RESPONSE_KEY, position);
+            Intent intent = new Intent(HomeActivity.this, HelperActivity.class);
+            startActivity(intent);
+        }
     }
 }

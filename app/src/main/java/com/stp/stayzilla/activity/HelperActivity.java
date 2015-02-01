@@ -24,33 +24,17 @@ public class HelperActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle b = getIntent().getExtras();
+        int hotelEntriesData = 0;
         if(b!=null) {
-            int hotelEntriesData = b.getInt(AppConstants.RESPONSE_KEY);
+             hotelEntriesData = b.getInt(AppConstants.RESPONSE_KEY);
+        }
 
-            switch (hotelEntriesData) {
-
-                case DrawerMenu.FRAGMENT_WISH_LIST:
-                    getSupportFragmentManager().beginTransaction().add(R.id.container,
-                            new KitchensMapFragment(), KitchensMapFragment.class.getName()).commit();
-                    break;
-                case DrawerMenu.FRAGMENT_FRIENDS:
-                    getSupportFragmentManager().beginTransaction().add(R.id.container,
-                            new KitchensMapFragment(), KitchensMapFragment.class.getName()).commit();
-                    break;
-                case DrawerMenu.FRAGMENT_ACCOUNT:
-                    getSupportFragmentManager().beginTransaction().add(R.id.container,
-                            new KitchensMapFragment(), KitchensMapFragment.class.getName()).commit();
-                    break;
-
-                case DrawerMenu.FRAGMENT_BOOKINGS:
-                    getSupportFragmentManager().beginTransaction().add(R.id.container,
-                            new KitchensMapFragment(), KitchensMapFragment.class.getName()).commit();
-                    break;
-            }
-        } else {
+            KitchensMapFragment kitchensMapFragment = new KitchensMapFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt(AppConstants.RESPONSE_KEY, hotelEntriesData);
+            kitchensMapFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().add(R.id.container,
                     new KitchensMapFragment(), KitchensMapFragment.class.getName()).commit();
-        }
 
     }
 

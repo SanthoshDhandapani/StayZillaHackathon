@@ -85,7 +85,8 @@ public abstract class BaseActivity extends ActionBarActivity implements
     }
 
     @Override
-    public void onNavigationDrawerItemSelected(int position) {   }
+    public void onNavigationDrawerItemSelected(int position) {
+    }
 
     public void fragmentTransaction(Fragment fragment) {
         if (fragment != null) {

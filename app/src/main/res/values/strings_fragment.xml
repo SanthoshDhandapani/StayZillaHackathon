@@ -9,17 +9,20 @@
     <string name="fragment_drawerMenu_text_fragment2">Friends</string>
     <string name="fragment_drawerMenu_text_fragment3">My Account</string>
     <string name="fragment_drawerMenu_text_fragment4">My Bookings</string>
+    <string name="fragment_drawerMenu_text_fragment5">Theme Packages</string>
 
     <string name="fragment_drawerMenu_icon_fragment1">@string/fa_heart</string>
     <string name="fragment_drawerMenu_icon_fragment2">@string/fa_users</string>
     <string name="fragment_drawerMenu_icon_fragment3">@string/fa_user</string>
     <string name="fragment_drawerMenu_icon_fragment4">@string/fa_tags</string>
+    <string name="fragment_drawerMenu_icon_fragment5">@string/fa_tags</string>
 
     <string-array name="fragment_drawerMenu_title">
         <item>@string/fragment_drawerMenu_text_fragment1</item>
         <item>@string/fragment_drawerMenu_text_fragment2</item>
         <item>@string/fragment_drawerMenu_text_fragment3</item>
         <item>@string/fragment_drawerMenu_text_fragment4</item>
+        <item>@string/fragment_drawerMenu_text_fragment5</item>
     </string-array>
 
     <string-array name="fragment_drawerMenu_icons">
@@ -27,6 +30,7 @@
         <item>@string/fragment_drawerMenu_icon_fragment2</item>
         <item>@string/fragment_drawerMenu_icon_fragment3</item>
         <item>@string/fragment_drawerMenu_icon_fragment4</item>
+        <item>@string/fragment_drawerMenu_icon_fragment5</item>
     </string-array>
 
     <!-- Sectios Tabs -->

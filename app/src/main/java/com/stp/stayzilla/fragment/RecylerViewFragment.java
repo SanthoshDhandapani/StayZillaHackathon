@@ -1,7 +1,7 @@
 package com.stp.stayzilla.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,11 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.melnykov.fab.FloatingActionButton;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.stp.stayzilla.MainActivity;
+import com.stp.stayzilla.KitchensMapFragment;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
@@ -22,6 +18,9 @@ import com.stp.stayzilla.utility.PrintFontIconDrawable;
 import com.yalantis.pulltorefresh.library.PullToRefreshView;
 
 import org.json.JSONArray;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -85,6 +84,19 @@ public class RecylerViewFragment extends BaseFragment {
 
     @OnClick(R.id.mapview)
     public void onMapFabClick(View view) {
+        Bundle bundle = new Bundle();
+        bundle.putString("from", "nearPlaces");
+        KitchensMapFragment frag = new KitchensMapFragment();
+        frag.setArguments(bundle);
+        fragmentTransaction(frag);
+    }
+
+    private void fragmentTransaction(Fragment fragment) {
+        if (fragment != null) {
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.screen_default_container, fragment)
+                    .commit();
+        }
     }
 
     private void loadViewComponents() {
