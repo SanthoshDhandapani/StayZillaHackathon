@@ -4,6 +4,9 @@ package com.stp.stayzilla.fragment;
 import android.app.DatePickerDialog;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -22,7 +26,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 import com.stp.stayzilla.R;
+import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
+import com.stp.stayzilla.constants.FragmentNames;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -54,10 +61,13 @@ public class LocationDetailFragment extends Fragment {
     Button mEndDate;
     @InjectView(R.id.separator)
     ImageView mSeparator;
-    @InjectView(R.id.hotellist)
-    ListView mHotellist;
+
+    private RecyclerView mRecyclerView;
 
     public static Place selectedPlace;
+    String name;
+    double lati;
+    double lan;
 
     public LocationDetailFragment() {
         // Required empty public constructor
@@ -65,7 +75,8 @@ public class LocationDetailFragment extends Fragment {
 
     public static LocationDetailFragment newInstance(Place place){
         LocationDetailFragment fragment = new LocationDetailFragment();
-        fragment.selectedPlace=place;
+        //fragment.selectedPlace=place;
+
         return fragment;
     }
 
@@ -77,14 +88,21 @@ public class LocationDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_details, container, false);
+        name = getArguments().getString("name");
+        lati = getArguments().getDouble("lat");
+        lan = getArguments().getDouble("lan");
         ButterKnife.inject(this, view);
         initView();
+         mRecyclerView = (RecyclerView) view.findViewById(R.id.hotellist);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(layoutManager);
         return view;
     }
 
     private void initView() {
         Picasso.with(getActivity()).load("http://www.ultimatebali.com/sites/default/files/styles/listing_slideshow/public/TirtaNilaPreview_35_NightLightsOnTheBay_1.jpg").fit().into(mLocationimage);
-        locationName.setText(selectedPlace.getName());
+        locationName.setText(name);
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         String url ="http://180.92.168.7/hotels";
 
@@ -92,7 +110,6 @@ public class LocationDetailFragment extends Fragment {
 
             @Override
             public void onResponse(String response) {
-                System.out.println("Response: "+response);
                 processResponse(response);
             }
         }, new Response.ErrorListener() {
@@ -107,8 +124,8 @@ public class LocationDetailFragment extends Fragment {
                 params.put("checkin",mStartDate.getText().toString());
                 params.put("checkout",mEndDate.getText().toString());
                 params.put("property_type","Hotels");
-                params.put("lat",String.valueOf(selectedPlace.getLatitude()));
-                params.put("lng",String.valueOf(selectedPlace.getLongitude()));
+                params.put("lat",String.valueOf(lati));
+                params.put("lng",String.valueOf(lan));
 
 //                params.put("user",userAccount.getUsername());
 //                params.put("pass",userAccount.getPassword());
@@ -125,6 +142,9 @@ public class LocationDetailFragment extends Fragment {
     private void processResponse(String response) {
         try {
             JSONObject json = new JSONObject(response);
+            JSONArray hotels  = json.getJSONArray("hotels");
+
+            mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(getActivity(),hotels));
         } catch (JSONException e) {
             e.printStackTrace();
         }

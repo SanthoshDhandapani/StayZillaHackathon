@@ -31,10 +31,13 @@
         </activity>
 
         <activity android:name=".activity.DetailsActivity"/>
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBC_jqbZvove4eGRxU4fDwBzclVoZcuS3k" />
         <activity android:name="com.facebook.LoginActivity" />
+        <activity android:name=".activity.LocationDetailsActivity"/>
+
 
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
     </application>

@@ -14,11 +14,26 @@ import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.constants.FragmentNames;
 import com.stp.stayzilla.fragment.HomeFragment;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class HomeActivity extends BaseActivity {
+
+    public JSONArray hotels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        if(getIntent()!=null){
+            String response=getIntent().getStringExtra(AppConstants.RESPONSE_KEY);
+            try {
+                hotels = new JSONArray(response);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
         if (savedInstanceState == null) {
             HomeFragment fragment = new HomeFragment();
             getSupportFragmentManager().beginTransaction().add(R.id.screen_default_container, fragment, FragmentNames.FRAGMENT_HOME_).commit();
