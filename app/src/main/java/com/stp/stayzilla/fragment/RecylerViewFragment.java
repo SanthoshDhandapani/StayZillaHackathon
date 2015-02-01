@@ -92,11 +92,9 @@ public class RecylerViewFragment extends BaseFragment {
 
     private void loadViewComponents() {
         mRecyclerView = (RecyclerView) mViewRecyclerCardsView.findViewById(R.id.fragment_recyler_view_content_main);
-        mFloatingActionButton = (FloatingActionButton) mViewRecyclerCardsView.findViewById(R.id.mapview);
     }
 
     private void loadInfoView() {
-        mFloatingActionButton.attachToRecyclerView(mRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setHasFixedSize(true);
