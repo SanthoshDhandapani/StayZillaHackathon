@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="2">
         <RelativeLayout
             android:id="@+id/profile_view"
             android:layout_width="match_parent"
@@ -32,22 +32,25 @@
             android:layout_gravity="start"
             android:background="@color/theme_dialer_high" >
 
-            <ImageView
+            <com.facebook.widget.ProfilePictureView
                 android:id="@+id/profile_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/profile_icon"
+                android:layout_marginTop="20dp"
                 android:padding="@dimen/profile_view_padding"/>
 
             <TextView
                 android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:textColor="@android:color/white"
                 android:text="@string/profile_name"
                 android:textSize="@dimen/profile_user_name_text_size"
-                android:padding="@dimen/profile_view_padding"/>
+                android:padding="@dimen/profile_view_padding"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/profile_image"
+                android:layout_toEndOf="@+id/profile_image" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -68,7 +71,7 @@
                 android:layout_height="match_parent"
                 android:choiceMode="singleChoice"
                 android:divider="@color/profile_divider_color"
-                android:dividerHeight="1dp"/>
+                android:dividerHeight="0.2dp"/>
         </RelativeLayout>
 
     </LinearLayout>
