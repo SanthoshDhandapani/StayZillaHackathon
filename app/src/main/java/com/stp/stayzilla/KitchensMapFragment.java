@@ -33,6 +33,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.melnykov.fab.FloatingActionButton;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.stp.stayzilla.activity.LocationDetailsActivity;
+import com.stp.stayzilla.constants.AppConstants;
+import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.fragment.LocationDetailFragment;
 
 import org.json.JSONArray;
@@ -81,18 +83,32 @@ public class KitchensMapFragment extends Fragment implements AdapterView.OnItemC
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         //dialog.show();
-        if (getArguments() != null && getArguments().containsKey("from")) {
+        if (getArguments() != null && getArguments().containsKey(AppConstants.RESPONSE_KEY)) {
             System.out.println("pradeep from "+getArguments().containsKey("from"));
-            String fromScreen = getArguments().getString("from");
-            if (fromScreen.equalsIgnoreCase("Wishlist")) {
-                initMap(getStaticTourPlaces());
-            } else if (fromScreen.equalsIgnoreCase("ThemePlaces")) {
-                initMap(getStaticBeaches());
-            } else if (fromScreen.equalsIgnoreCase("nearPlaces")) {
-                initMap(getStaticNearByPlaces());
-            } else {
-                initMap(getStaticTourPlaces());
+            int position = getArguments().getInt(AppConstants.RESPONSE_KEY);
+
+            switch (position) {
+
+                case DrawerMenu.FRAGMENT_WISH_LIST:
+                    initMap(getStaticTourPlaces());
+                    break;
+                case DrawerMenu.FRAGMENT_FRIENDS:
+
+                    break;
+                case DrawerMenu.FRAGMENT_ACCOUNT:
+
+                    break;
+
+                case DrawerMenu.FRAGMENT_BOOKINGS:
+
+                    break;
+                case DrawerMenu.FRAGMENT_THEME_PACK:
+                    initMap(getStaticBeaches());
+                    break;
+
+                default: initMap(getStaticNearByPlaces());
             }
+
         } else {
             initMap(getStaticTourPlaces());
             //getSearchTask.execute();
