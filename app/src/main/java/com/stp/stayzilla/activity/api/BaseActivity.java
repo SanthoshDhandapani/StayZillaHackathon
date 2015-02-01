@@ -26,20 +26,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stp.stayzilla.R;
+import com.stp.stayzilla.constants.AppConstants;
 import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.fragment.HomeFragment;
 import com.stp.stayzilla.fragment.NavigationDrawerFragment;
 import com.stp.stayzilla.utility.PrintFontIconDrawable;
 
+import org.json.JSONArray;
+
 public abstract class BaseActivity extends ActionBarActivity implements
                                     NavigationDrawerFragment.NavigationDrawerCallbacks {
     protected Toolbar mToolBar;
     private NavigationDrawerFragment mNavigationDrawerFragment;
+    public JSONArray hotelEntries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setLayoutResourceIdentifier());
+        Bundle b = getIntent().getExtras();
+        String hotelEntriesData=b.getString(AppConstants.RESPONSE_KEY);
+        try {
+            this.hotelEntries = new JSONArray(hotelEntriesData);
+        } catch (Exception e) {e.printStackTrace();}
 
         loadViewComponents();
         loadInfoToolbar();
