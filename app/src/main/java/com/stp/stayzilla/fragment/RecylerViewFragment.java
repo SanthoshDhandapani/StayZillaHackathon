@@ -100,12 +100,7 @@ public class RecylerViewFragment extends BaseFragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(getActivity(),hotelEntries));
-        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), MainActivity.class));
-            }
-        });
+
     }
 
     private List<CardViewBean> createMockList() {
