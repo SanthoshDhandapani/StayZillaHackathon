@@ -1,4 +1,4 @@
-package com.stp.stayzilla;
+package com.stp.stayzilla.fragment;
 
 
 import android.app.DatePickerDialog;
@@ -21,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
+import com.stp.stayzilla.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,7 +57,7 @@ public class LocationDetailFragment extends Fragment {
     @InjectView(R.id.hotellist)
     ListView mHotellist;
 
-   static Place selectedPlace;
+    public static Place selectedPlace;
 
     public LocationDetailFragment() {
         // Required empty public constructor

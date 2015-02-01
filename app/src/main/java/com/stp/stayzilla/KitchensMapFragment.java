@@ -29,6 +29,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+import com.stp.stayzilla.activity.LocationDetailsActivity;
+import com.stp.stayzilla.fragment.LocationDetailFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;

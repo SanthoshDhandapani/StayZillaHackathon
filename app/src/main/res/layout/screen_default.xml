@@ -28,6 +28,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white"
                     android:layout_centerVertical="true"/>
+
                 <ImageView
                     android:id="@+id/search_view"
                     android:layout_width="wrap_content"
