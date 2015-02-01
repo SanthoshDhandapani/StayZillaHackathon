@@ -2,9 +2,6 @@ package com.stp.stayzilla.events;
 
 import java.util.List;
 
-/**
- * Created by Halyson on 31/12/14.
- */
 public class LoadTitleTabsDisk {
     private List<String> listTitleTabs;
 

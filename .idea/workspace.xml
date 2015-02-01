@@ -19,14 +19,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3304121d-ec2c-42bb-b307-06a4c9d4e535" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/AppConstants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/SplashActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/splash_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/api/BaseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/api/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/HomeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings_default.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings_default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/halyson.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/halyson.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Material-Design-Example.iws" />
@@ -1126,21 +1136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/material_color.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/material_fragment_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_default.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/service/HomeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/interfaces/home/HomeService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/interfaces/home/HomePresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/presenter/HomePresenterImpl.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/fragment/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/interfaces/home/HomeView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/adapter/HomePagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/MaterialDesignApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/halyson/materialdesign/StayZillaApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recycler_view_comp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/string.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/map_fragment.xml" />
@@ -1163,11 +1158,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/DrawerMenuAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings_fragment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/screen_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recycler_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/screen_default.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings_default.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/splash_activity.xml" />
@@ -1177,13 +1169,31 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/api/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java" />
+        <option value="$PROJECT_DIR$/.idea/dictionaries/halyson.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1548" />
+    <option name="width" value="1552" />
     <option name="height" value="842" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1212,6 +1222,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Material-Design-Example" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1288,62 +1309,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StayZillaHackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StayZillaHackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StayZillaHackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StayZillaHackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1385,16 +1350,43 @@
               <option name="myItemId" value="stp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stayzilla" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Material-Design-Example" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemId" value="StayZillaHackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayZillaHackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1675,11 +1667,15 @@
       <created>1422757552989</created>
       <updated>1422757552989</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Splash Screen Integration">
+      <created>1422760985070</created>
+      <updated>1422760985070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1548" height="842" extended-state="0" />
+    <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1689,19 +1685,19 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33576643" sideWeight="0.3534946" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327748" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27445257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33576643" sideWeight="0.64650536" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33576643" sideWeight="0.6461126" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4569343" sideWeight="0.35187668" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26814517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26742628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1764,125 +1760,13 @@
     <MESSAGE value="Side menu Integration" />
     <MESSAGE value="OverAll Integration" />
     <MESSAGE value="Before Merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before Merge" />
+    <MESSAGE value="Splash Screen Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Splash Screen Integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_location_details.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/icomoon_icons.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_fragment.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2448">
-          <caret line="122" column="69" selection-start-line="122" selection-start-column="69" selection-end-line="122" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_marker_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5925927" vertical-offset="26" max-vertical-offset="544">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Windows-Developer-Softwares/android-studio/Sdk/platforms/android-21/data/res/color/tertiary_text_light.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46097562" vertical-offset="100" max-vertical-offset="510">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Windows-Developer-Softwares/android-studio/Sdk/platforms/android-21/data/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33211008" vertical-offset="686" max-vertical-offset="2856">
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Windows-Developer-Softwares/android-studio/Sdk/platforms/android-21/data/res/color/secondary_text_light.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6256881" vertical-offset="33" max-vertical-offset="578">
-          <caret line="22" column="82" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07272727" vertical-offset="159" max-vertical-offset="544">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/service/HomeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14825581" vertical-offset="0" max-vertical-offset="425">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/repository/HomeRepositoryDiskImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15407854" vertical-offset="0" max-vertical-offset="850">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/PrintFontIconDrawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24709302" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34593022" vertical-offset="51" max-vertical-offset="527">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/model/CardViewBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.049418606" vertical-offset="0" max-vertical-offset="344">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/model/SectionsTabsBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.049418606" vertical-offset="0" max-vertical-offset="344">
@@ -1933,7 +1817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7350157" vertical-offset="856" max-vertical-offset="1377">
           <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1942,10 +1825,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#160#161#0" expanded="false" />
+            <element signature="e#194#195#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#406#407#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1988,13 +1871,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1860465" vertical-offset="153" max-vertical-offset="1224">
-          <caret line="52" column="108" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/KitchensMapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3323263" vertical-offset="9" max-vertical-offset="6613">
@@ -2018,7 +1894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8044164" vertical-offset="0" max-vertical-offset="374">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2026,26 +1901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56925416" vertical-offset="0" max-vertical-offset="657">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_details.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5235008" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8895349" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2075,9 +1930,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5457413" vertical-offset="303" max-vertical-offset="1173">
           <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding>
-            <element signature="e#2404#2430#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2089,19 +1942,9 @@
         <state vertical-scroll-proportion="-10.925926" vertical-offset="79" max-vertical-offset="578">
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
-            <element signature="e#494#515#0" expanded="true" />
-            <element signature="e#576#601#0" expanded="true" />
-            <element signature="e#1018#1043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#536#554#0" expanded="true" />
+            <element signature="e#494#515#0" expanded="false" />
+            <element signature="e#576#601#0" expanded="false" />
+            <element signature="e#1018#1043#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2122,34 +1965,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3089431" vertical-offset="970" max-vertical-offset="1462">
-          <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/AppConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="7" column="37" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71662766" vertical-offset="0" max-vertical-offset="427">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -2191,7 +2010,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1513">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#2864#2892#0" expanded="true" />
+            <element signature="e#2864#2892#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2200,6 +2019,179 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.07494145" vertical-offset="321" max-vertical-offset="748">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_details.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8239796" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="332" max-vertical-offset="765">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555" vertical-offset="0" max-vertical-offset="544">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7037037" vertical-offset="104" max-vertical-offset="1445">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555" vertical-offset="0" max-vertical-offset="432">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555" vertical-offset="0" max-vertical-offset="432">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/halyson.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03935185" vertical-offset="0" max-vertical-offset="432">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7679558" vertical-offset="516" max-vertical-offset="39304">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>

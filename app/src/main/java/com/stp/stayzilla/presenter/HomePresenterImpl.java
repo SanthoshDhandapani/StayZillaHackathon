@@ -9,9 +9,6 @@ import com.stp.stayzilla.interfaces.home.HomeView;
 import com.stp.stayzilla.service.HomeServiceImpl;
 import com.stp.stayzilla.utility.BusProvider;
 
-/**
- * Created by Halyson on 20/01/15.
- */
 public class HomePresenterImpl implements HomePresenter {
     private static final String TAG = HomePresenterImpl.class.getSimpleName();
     private HomeView mHomeView;

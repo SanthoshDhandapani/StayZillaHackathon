@@ -1,8 +1,5 @@
 package com.stp.stayzilla.constants;
 
-/**
- * Created by halysonlimagoncalves on 20/07/14.
- */
 public class DrawerMenu {
     /**
      * The fragment argument representing the section number for this

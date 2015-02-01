@@ -23,10 +23,6 @@ import com.stp.stayzilla.R;
 
 import java.util.ArrayList;
 
-
-/**
- * Created by Halyson on 20/01/15.
- */
 public class DetailsActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
     private View mImageView;
     private View mToolbarView;

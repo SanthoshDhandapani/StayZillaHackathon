@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 
 import com.stp.stayzilla.R;
 
-/**
- * Created by halyson on 18/12/14.
- */
 public class DefaultFragment extends Fragment {
     public static DefaultFragment newInstance() {
         return new DefaultFragment();

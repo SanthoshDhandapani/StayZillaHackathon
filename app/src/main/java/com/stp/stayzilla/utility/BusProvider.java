@@ -6,9 +6,6 @@ import com.squareup.otto.Bus;
 
 import com.stp.stayzilla.StayZillaApplication;
 
-/**
- * Created by Halyson on 05/01/15.
- */
 public class BusProvider {
     private static final String TAG = PreferencesEditor.class.getSimpleName();
     private static Bus mBus;
