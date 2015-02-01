@@ -6,6 +6,9 @@
     <!-- Fab icons dimensions. -->
     <dimen name="fab_icon_size">28dp</dimen>
 
+    <!-- Action bar icons dimensions. -->
+    <dimen name="action_bar_icon_size">22dp</dimen>
+
     <!-- Text Sizes -->
     <dimen name="text_size_two">2dp</dimen>
     <dimen name="text_size_four">4dp</dimen>

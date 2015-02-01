@@ -22,11 +22,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.fragment.HomeFragment;
 import com.stp.stayzilla.fragment.NavigationDrawerFragment;
+import com.stp.stayzilla.utility.PrintFontIconDrawable;
 
 public abstract class BaseActivity extends ActionBarActivity implements
                                     NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -52,7 +55,13 @@ public abstract class BaseActivity extends ActionBarActivity implements
 
     private void loadInfoToolbar() {
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle(getTitleToolBar());
+      //  getSupportActionBar().setTitle(getTitleToolBar());
+        TextView appText = (TextView) findViewById(R.id.app_name);
+        appText.setText(getTitleToolBar());
+        ImageView searchView = (ImageView) findViewById(R.id.search_view);
+        searchView.setImageDrawable(PrintFontIconDrawable.getInstance(this)
+        .getDrawableFontIcon(R.string.fa_search,android.R.color.white,
+                R.dimen.action_bar_icon_size));
     }
 
 
@@ -68,10 +77,14 @@ public abstract class BaseActivity extends ActionBarActivity implements
             case DrawerMenu.HOME:
                 fragmentTransaction(new HomeFragment());
                 break;
-            case DrawerMenu.FRAGMENT1:
+            case DrawerMenu.FRAGMENT_WISH_LIST:
                 fragmentTransaction(new HomeFragment());
                 break;
-            case DrawerMenu.FRAGMENT2:
+            case DrawerMenu.FRAGMENT_FRIENDS:
+                fragmentTransaction(new HomeFragment());
+            case DrawerMenu.FRAGMENT_ACCOUNT:
+                fragmentTransaction(new HomeFragment());
+            case DrawerMenu.FRAGMENT_BOOKINGS:
                 fragmentTransaction(new HomeFragment());
                 break;
         }
