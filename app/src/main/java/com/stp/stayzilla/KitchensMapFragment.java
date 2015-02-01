@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -28,6 +30,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.melnykov.fab.FloatingActionButton;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import org.json.JSONArray;
@@ -50,7 +53,7 @@ import se.walkercrou.places.Place;
 /**
  * Created by santhosh on 12/22/14.
  */
-public class KitchensMapFragment extends SupportMapFragment implements AdapterView.OnItemClickListener, View.OnClickListener {
+public class KitchensMapFragment extends Fragment implements AdapterView.OnItemClickListener, View.OnClickListener {
     static final LatLng HAMBURG = new LatLng(12.979432, 80.226490);
     static final LatLng KIEL = new LatLng(12.977790, 80.224465);
     MapFragment kitchenMiniMapFragment = new MapFragment();
@@ -64,6 +67,8 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
     private GooglePlaces client;
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private Place selectedPlace;
+    FloatingActionButton searchButton;
+    private AutoCompleteTextView autoCompView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle args) {
@@ -74,24 +79,39 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         //dialog.show();
-        initMap(null);
-        //getSearchTask.execute();
-
+        if (getArguments() != null && getArguments().containsKey("from")) {
+            System.out.println("pradeep from "+getArguments().containsKey("from"));
+            String fromScreen = getArguments().getString("from");
+            if (fromScreen.equalsIgnoreCase("Wishlist")) {
+                initMap(getStaticTourPlaces());
+            } else if (fromScreen.equalsIgnoreCase("ThemePlaces")) {
+                initMap(getStaticBeaches());
+            } else if (fromScreen.equalsIgnoreCase("nearPlaces")) {
+                initMap(getStaticNearByPlaces());
+            } else {
+                initMap(getStaticTourPlaces());
+            }
+        } else {
+            initMap(getStaticTourPlaces());
+            //getSearchTask.execute();
+        }
         return rootView;
     }
 
     private void initMap(ArrayList<LatLng> latLng1) {
-        ArrayList<LatLng> latLng = getStaticNearByPlaces();
-        bundle.putParcelableArrayList("latlng", latLng);
+        //ArrayList<LatLng> latLng = getStaticNearByPlaces();
+        bundle.putParcelableArrayList("latlng", latLng1);
         kitchenMiniMapFragment.setArguments(bundle);
         getActivity().getSupportFragmentManager().beginTransaction().add(R.id.map, kitchenMiniMapFragment).commit();
     }
 
     private void initView() {
+        searchButton = (FloatingActionButton) rootView.findViewById(R.id.search_button);
+        searchButton.setOnClickListener(this);
         searchedPlace = (TextView) rootView.findViewById(R.id.searched_Place);
-        searchedPlaceLayout = (LinearLayout)rootView.findViewById(R.id.searched_Place_Layout);
+        searchedPlaceLayout = (LinearLayout) rootView.findViewById(R.id.searched_Place_Layout);
         searchedPlaceLayout.setOnClickListener(this);
-        AutoCompleteTextView autoCompView = (AutoCompleteTextView) rootView.findViewById(R.id.auto_CompleteTextView);
+        autoCompView = (AutoCompleteTextView) rootView.findViewById(R.id.auto_CompleteTextView);
         autoCompView.setAdapter(new PlacesAutoCompleteAdapter(getActivity(), android.R.layout.simple_list_item_1));
         autoCompView.setOnItemClickListener(this);
         autoCompView.setVisibility(View.GONE);
@@ -214,7 +234,6 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
     }
 
 
-
     private static final String LOG_TAG = "ExampleApp";
 
     private static final String PLACES_API_BASE = "https://maps.googleapis.com/maps/api/place";
@@ -333,8 +352,6 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
     }
 
 
-
-
     private void markPlace() {
         searchedPlace.setText(selectedPlace.getName());
         System.out.println("pradeep mark place called");
@@ -344,18 +361,23 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
 
     @Override
     public void onClick(View v) {
-        if(v == searchedPlaceLayout){
+        if (v == searchedPlaceLayout) {
             navigateToDetailsScreen();
+        } else if (v == searchButton) {
+            autoCompView.setVisibility(View.VISIBLE);
+            autoCompView.requestFocus();
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(autoCompView, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 
     private void navigateToDetailsScreen() {
-        LocationDetailFragment.selectedPlace=selectedPlace;
-        startActivity(new Intent(getActivity(),LocationDetailsActivity.class));
+        LocationDetailFragment.selectedPlace = selectedPlace;
+        startActivity(new Intent(getActivity(), LocationDetailsActivity.class));
 
     }
 
-    public ArrayList<LatLng> getStaticBeaches(){
+    public ArrayList<LatLng> getStaticBeaches() {
         ArrayList<LatLng> list = new ArrayList<LatLng>();
         list.add(new LatLng(Double.parseDouble("15.312646"), Double.parseDouble("73.907753")));
         list.add(new LatLng(Double.parseDouble("15.312646"), Double.parseDouble("73.907753")));
@@ -368,7 +390,7 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
         return list;
     }
 
-    public ArrayList<LatLng> getStaticTourPlaces(){
+    public ArrayList<LatLng> getStaticTourPlaces() {
         ArrayList<LatLng> list = new ArrayList<LatLng>();
         list.add(new LatLng(Double.parseDouble("12.492225"), Double.parseDouble("76.690063")));
         list.add(new LatLng(Double.parseDouble("9.960059"), Double.parseDouble("78.195190")));
@@ -379,7 +401,7 @@ public class KitchensMapFragment extends SupportMapFragment implements AdapterVi
         return list;
     }
 
-    public ArrayList<LatLng> getStaticNearByPlaces(){
+    public ArrayList<LatLng> getStaticNearByPlaces() {
         ArrayList<LatLng> list = new ArrayList<LatLng>();
         list.add(new LatLng(Double.parseDouble("13.082680"), Double.parseDouble("80.270718")));
         list.add(new LatLng(Double.parseDouble("13.083841"), Double.parseDouble("80.260792")));

@@ -25,6 +25,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stp.stayzilla.KitchensMapFragment;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.constants.DrawerMenu;
 import com.stp.stayzilla.fragment.HomeFragment;
@@ -32,7 +33,7 @@ import com.stp.stayzilla.fragment.NavigationDrawerFragment;
 import com.stp.stayzilla.utility.PrintFontIconDrawable;
 
 public abstract class BaseActivity extends ActionBarActivity implements
-                                    NavigationDrawerFragment.NavigationDrawerCallbacks {
+        NavigationDrawerFragment.NavigationDrawerCallbacks {
     protected Toolbar mToolBar;
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
@@ -55,13 +56,13 @@ public abstract class BaseActivity extends ActionBarActivity implements
 
     private void loadInfoToolbar() {
         setSupportActionBar(mToolBar);
-      //  getSupportActionBar().setTitle(getTitleToolBar());
+        //  getSupportActionBar().setTitle(getTitleToolBar());
         TextView appText = (TextView) findViewById(R.id.app_name);
         appText.setText(getTitleToolBar());
         ImageView searchView = (ImageView) findViewById(R.id.search_view);
         searchView.setImageDrawable(PrintFontIconDrawable.getInstance(this)
-        .getDrawableFontIcon(R.string.fa_search,android.R.color.white,
-                R.dimen.action_bar_icon_size));
+                .getDrawableFontIcon(R.string.fa_search, android.R.color.white,
+                        R.dimen.action_bar_icon_size));
     }
 
 
@@ -73,12 +74,18 @@ public abstract class BaseActivity extends ActionBarActivity implements
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+        System.out.println("pradeep position = "+position);
         switch (position) {
-            case DrawerMenu.HOME:
-                fragmentTransaction(new HomeFragment());
-                break;
+//            case DrawerMenu.HOME:
+//                fragmentTransaction(new HomeFragment());
+//                break;
             case DrawerMenu.FRAGMENT_WISH_LIST:
-                fragmentTransaction(new HomeFragment());
+                System.out.println("pradeep wish list");
+                Bundle bundle = new Bundle();
+                bundle.putString("from", "Wishlist");
+                KitchensMapFragment frag = new KitchensMapFragment();
+                frag.setArguments(bundle);
+                fragmentTransaction(frag);
                 break;
             case DrawerMenu.FRAGMENT_FRIENDS:
                 fragmentTransaction(new HomeFragment());
@@ -87,6 +94,15 @@ public abstract class BaseActivity extends ActionBarActivity implements
             case DrawerMenu.FRAGMENT_BOOKINGS:
                 fragmentTransaction(new HomeFragment());
                 break;
+            case DrawerMenu.FRAGMENT_THEME_PACKAGES:
+                System.out.println("pradeep theme packages");
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("from", "ThemePlaces");
+                KitchensMapFragment frag1 = new KitchensMapFragment();
+                frag1.setArguments(bundle1);
+                fragmentTransaction(frag1);
+                break;
+
         }
     }
 

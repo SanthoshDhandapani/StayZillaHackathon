@@ -22,7 +22,8 @@
         </activity>
 
         <activity android:name=".activity.DetailsActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".LocationDetailsActivity"/>
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBC_jqbZvove4eGRxU4fDwBzclVoZcuS3k" />
