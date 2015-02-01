@@ -6,10 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.model.DrawerMenuBean;
+import com.stp.stayzilla.utility.PrintFontIconDrawable;
 
 import java.util.ArrayList;
 
@@ -49,16 +51,21 @@ public class DrawerMenuAdapter extends BaseAdapter {
 
             holder = new ViewHolder();
             holder.mTitle = (TextView) convertView.findViewById(R.id.fragment_drawerMenu_comp_title);
+            holder.mImageView = (ImageView) convertView.findViewById(R.id.prof_settings_icon);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.mTitle.setText(mListItensDrawerMenuBean.get(position).getTitle());
+        holder.mImageView.setImageDrawable(PrintFontIconDrawable.getInstance(mContext)
+                .getDrawableFontIcon(mListItensDrawerMenuBean.get(position).getFontName(),
+                                     R.color.profile_drawer_icons_color, R.dimen.fab_icon_size));
 
         return convertView;
     }
 
     private static class ViewHolder {
         TextView mTitle;
+        ImageView mImageView;
     }
 }

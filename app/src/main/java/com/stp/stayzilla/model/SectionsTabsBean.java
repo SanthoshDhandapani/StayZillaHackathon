@@ -1,8 +1,5 @@
 package com.stp.stayzilla.model;
 
-/**
- * Created by halyson on 18/12/14.
- */
 public class SectionsTabsBean {
     private String title;
 

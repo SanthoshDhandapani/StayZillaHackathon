@@ -8,7 +8,9 @@
     <color name="theme_window_background">#2A2A2A</color>
     <color name="accent">#ff4081</color>
     <color name="gray_row_color">#ff515252</color>
-
+    <color name="profile_divider_color">#ff6f6f6f</color>
+    <color name="profile_drawer_icons_color">#fff46bae</color>
+    <color name="action_icons_color">#7D7D7D</color>
 
     <color name="primary">#009688</color>
     <color name="primaryDark">#00796b</color>

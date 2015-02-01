@@ -24,6 +24,7 @@ import android.widget.TextView;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.facebook.Request;
 import com.facebook.Response;
@@ -212,21 +213,25 @@ public class
     }
 
     private ArrayList<DrawerMenuBean> loadMenuDrawerItens() {
-        String[] menuDrawerTitleArray;
-        ArrayList<DrawerMenuBean> menuDrawerListItens = null;
+        String[] menuDrawerTitleArray, menuDrawerIconsArray;
+        ArrayList<DrawerMenuBean> menuDrawerListItems = null;
 
         try {
+            menuDrawerListItems = new ArrayList<DrawerMenuBean>();
             menuDrawerTitleArray = getActivity().getResources().getStringArray(R.array.fragment_drawerMenu_title);
+            menuDrawerIconsArray = getActivity().getResources().getStringArray(R.array.fragment_drawerMenu_icons);
 
-            menuDrawerListItens = new ArrayList<>();
-            for (String aMenuDrawerTitleArray : menuDrawerTitleArray) {
-                menuDrawerListItens.add(new DrawerMenuBean(aMenuDrawerTitleArray));
+            for (int index=0; index<menuDrawerTitleArray.length; index++) {
+                DrawerMenuBean drawerMenuBean = new DrawerMenuBean(menuDrawerTitleArray[index]);
+                drawerMenuBean.setFontName(menuDrawerIconsArray[index]);
+                menuDrawerListItems.add( drawerMenuBean );
             }
-            return menuDrawerListItens;
+
+            return menuDrawerListItems;
         } catch (Resources.NotFoundException notFoundExcepetion) {
             Log.e(TAG, "Error Getting The Array", notFoundExcepetion);
         }
-        return menuDrawerListItens;
+        return menuDrawerListItems;
     }
 
 

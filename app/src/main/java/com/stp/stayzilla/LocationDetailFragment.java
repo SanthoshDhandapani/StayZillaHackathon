@@ -41,7 +41,6 @@ import se.walkercrou.places.Place;
  */
 public class LocationDetailFragment extends Fragment {
 
-
     @InjectView(R.id.locationimage)
     ImageView mLocationimage;
     @InjectView(R.id.locationName)
