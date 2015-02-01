@@ -4,6 +4,10 @@ package com.stp.stayzilla.fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+
+
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -50,6 +54,15 @@ public class HomeFragment extends BaseFragment implements HomeView {
     public void onDestroy() {
         mHomePresenter.onDestroy();
         super.onDestroy();
+    }
+
+
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.homesearch,menu);
+
     }
 
     @Override

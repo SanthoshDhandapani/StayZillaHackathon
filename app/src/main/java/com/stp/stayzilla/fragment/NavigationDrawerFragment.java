@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
@@ -15,11 +17,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.facebook.Request;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.SessionState;
+import com.facebook.model.GraphUser;
+import com.facebook.widget.ProfilePictureView;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.adapter.DrawerMenuAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
@@ -58,6 +70,8 @@ public class
     private View mFragmentContainerView;
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
+    private TextView mProfileName;
+    private ProfilePictureView mProfileImage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,11 +89,57 @@ public class
                              Bundle savedInstanceState) {
         drawerLayout =  inflater.inflate(R.layout.fragment_drawer_menu, container, false);
         mDrawerListView = (ListView)drawerLayout.findViewById(R.id.fragment_drawerMenu_listView);
+        drawerLayout.findViewById(R.id.profile_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fbLogin();
+            }
+        });
+        mProfileName= (TextView)drawerLayout.findViewById(R.id.profile_name);
+        mProfileImage =(ProfilePictureView)drawerLayout.findViewById(R.id.profile_image);
 
         loadListeners();
         loadInfoView();
 
         return drawerLayout;
+    }
+
+    private void fbLogin() {
+
+            Session.openActiveSession(getActivity(), true, new Session.StatusCallback() {
+                @Override
+                public void call(Session session, SessionState state, Exception exception) {
+                    if (exception != null) {
+                        Log.d("Facebook", exception.getMessage());
+                    }
+                    Log.d("Facebook", "Session State: " + session.getState());
+                    // you can make request to the /me API or do other stuff like post, etc. here
+                    if(session.isOpened()) {
+                        Request.newMeRequest(session, new Request.GraphUserCallback() {
+                            @Override
+                            public void onCompleted(GraphUser user, Response response) {
+                                if (user != null) {
+                                    try {
+                                        mProfileImage.setProfileId(user.getId());
+                                        mProfileName.setText(user.getName());
+//                                    URL imgUrl = new URL("http://graph.facebook.com/"
+//                                            + user.getId() + "/picture?type=large");
+//
+//                                    InputStream in = (InputStream) imgUrl.getContent();
+//                                    Bitmap bitmap = BitmapFactory.decodeStream(in);
+                                        //Bitmap bitmap = BitmapFactory.decodeStream(imgUrl      // tried this also
+                                        //.openConnection().getInputStream());
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        }).executeAsync();
+                    }
+                }
+            });
+
+
     }
 
     @Override

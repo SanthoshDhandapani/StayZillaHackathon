@@ -1,5 +1,6 @@
 package com.stp.stayzilla.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import com.melnykov.fab.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.stp.stayzilla.MainActivity;
 import com.stp.stayzilla.R;
 import com.stp.stayzilla.adapter.RecyclerViewCardsAdapter;
 import com.stp.stayzilla.fragment.api.BaseFragment;
@@ -98,6 +100,7 @@ public class RecylerViewFragment extends BaseFragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(new RecyclerViewCardsAdapter(getActivity(),hotelEntries));
+
     }
 
     private List<CardViewBean> createMockList() {
