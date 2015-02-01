@@ -19,24 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3304121d-ec2c-42bb-b307-06a4c9d4e535" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/utility/BusProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/DefaultFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/activity/DetailsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/DrawerMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/Fragment3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/constants/FragmentNames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/HomePagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomePresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/presenter/HomePresenterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/interfaces/home/HomeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadColorsTabsDisk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/events/LoadTitleTabsDisk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/adapter/RecyclerViewCardsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stp/stayzilla/fragment/RecylerViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/halyson.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/halyson.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/stayzilla.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Material-Design-Example.iws" />
@@ -1671,7 +1654,11 @@
       <created>1422760985070</created>
       <updated>1422760985070</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Splash Screen Integration">
+      <created>1422763821004</created>
+      <updated>1422763821004</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
