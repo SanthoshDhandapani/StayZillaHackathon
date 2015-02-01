@@ -94,10 +94,10 @@ public class MapFragment extends SupportMapFragment {
         latestLatLong = latLang;
 
         // Move the camera instantly to hamburg with a zoom of 15.
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latestLatLong, 15));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latestLatLong, 8));
 
         // Zoom in, animating the camera.
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(8), 2000, null);
 
         //final TextView restaurantName = (TextView) getActivity().findViewById(R.id.restaurant_map_name_info);
         //restaurantName.setText(latestKitchen.getString("displayName"));

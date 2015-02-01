@@ -70,9 +70,7 @@ public class HomeActivity extends BaseActivity {
         super.onNavigationDrawerItemSelected(position);
 
         if(position !=   DrawerMenu.FRAGMENT_FRIENDS
-
         && position != DrawerMenu.FRAGMENT_ACCOUNT
-
         && position !=  DrawerMenu.FRAGMENT_BOOKINGS
         ) {
 

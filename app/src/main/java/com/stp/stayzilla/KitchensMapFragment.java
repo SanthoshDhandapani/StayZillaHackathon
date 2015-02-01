@@ -110,7 +110,7 @@ public class KitchensMapFragment extends Fragment implements AdapterView.OnItemC
             }
 
         } else {
-            initMap(getStaticTourPlaces());
+            initMap(getStaticNearByPlaces());
             //getSearchTask.execute();
         }
         return rootView;
