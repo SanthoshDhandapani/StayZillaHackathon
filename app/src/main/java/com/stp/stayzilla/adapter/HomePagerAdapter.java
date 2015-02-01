@@ -13,9 +13,6 @@ import com.stp.stayzilla.fragment.Fragment3;
 
 import org.json.JSONArray;
 
-/**
- * Created by halyson on 18/12/14.
- */
 public class HomePagerAdapter extends FragmentPagerAdapter {
 
     JSONArray hotelEntries;

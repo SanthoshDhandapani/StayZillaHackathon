@@ -7,6 +7,12 @@
     <dimen name="fab_icon_size">28dp</dimen>
 
     <!-- Action bar icons dimensions. -->
+    <dimen name="splash_icon_size">85dp</dimen>
+
+    <!-- Action bar icons dimensions. -->
+    <dimen name="splash_text_size">72dp</dimen>
+
+    <!-- Action bar icons dimensions. -->
     <dimen name="action_bar_icon_size">22dp</dimen>
 
     <!-- Text Sizes -->

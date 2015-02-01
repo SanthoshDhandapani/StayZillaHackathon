@@ -21,9 +21,6 @@ import com.stp.stayzilla.model.CardViewBean;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-/**
- * Created by Halyson on 19/12/14.
- */
 public class RecyclerViewCardsAdapter extends RecyclerView.Adapter<RecyclerViewCardsAdapter.ViewHolder> {
     private final JSONArray mListItemsCard;
     private Activity mActivity;

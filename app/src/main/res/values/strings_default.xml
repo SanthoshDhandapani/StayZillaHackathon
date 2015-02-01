@@ -3,6 +3,7 @@
 
     <string name="app_name">StayZilla</string>
 
+    <string name="splash_name">Stay Zilla</string>
     <!-- Drawer Menu Default -->
     <string name="drawerMenuComp_textTitle">Menu 1</string>
 

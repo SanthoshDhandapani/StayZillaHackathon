@@ -1,8 +1,5 @@
 package com.stp.stayzilla.events;
 
-/**
- * Created by Halyson on 31/12/14.
- */
 public class LoadColorsTabsDisk {
     private int colorTab;
     private int dividerColorTab;

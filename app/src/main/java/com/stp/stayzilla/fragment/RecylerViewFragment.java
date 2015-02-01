@@ -26,9 +26,6 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-/**
- * Created by halyson on 18/12/14.
- */
 public class RecylerViewFragment extends BaseFragment {
 
     private static final String MOCK_URL = "http://lorempixel.com/800/400/nightlife/";
